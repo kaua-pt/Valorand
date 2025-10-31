@@ -16,13 +16,17 @@ export default function Card({ map }: CardProps) {
 const style = {
   container: {
     position: "relative",
-    height: "100vh",
+    height: "85vh",
     width: "30vw",
     overflow: "hidden",
+    borderRadius:"20px",
+    margin:"10px",
+    display:"flex",
+    alignItems:"center"
   } as React.CSSProperties,
 
   image: {
-    height: "100vw",
+    height: "100%",
     width: "100%",
     objectFit: "cover",
     objectPosition: "center",

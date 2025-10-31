@@ -5,7 +5,7 @@ import Card from './components/Card';
 
 export default function App() {
   const rd = new RandomList(
-  [
+    [
       { name: "Corrode", imgPath: "/assets/Corrode.jpg" },
       { name: "Abyss", imgPath: "/assets/Abyss.png" },
       { name: "Sunset", imgPath: "/assets/Sunset.jpg" },
@@ -13,7 +13,7 @@ export default function App() {
       { name: "Pearl", imgPath: "/assets/Pearl.jpg" },
       { name: "Haven", imgPath: "/assets/Haven.jpg" },
       { name: "Split", imgPath: "/assets/Split.jpg" },
-  ]
+    ]
   )
 
   const [wasSelected, setWasSelected] = useState(false);
@@ -32,7 +32,7 @@ export default function App() {
   return (
     <>
     {wasSelected ?
-        <div >
+        <div>
           <div style={styles.mapsSelected}>
             {
               selectedMaps.map((map)=>(
@@ -76,10 +76,14 @@ const styles: {
     display:"flex",
     flexDirection: "column",
   },
-  centerContent:{
-    display:"flex",
-    flexDirection:"column",
-  }
+  centerContent: {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    display: "flex",
+    flexDirection: "column",
+  },
   seriesButton :{
     display:"flex",
     justifyContent: "center",
@@ -88,7 +92,7 @@ const styles: {
   selectButton:{
     marginTop:"20px",
     position: "absolute",
-    top: "80vh",
+    top: "70vh",
     left: "50%",
     transform: "translateX(-50%)",
     color: "white",
@@ -99,5 +103,7 @@ const styles: {
   },
   mapsSelected:{
     display:"flex",
+    width:"95vw",
+    justifyContent:"center"
   },
 }
